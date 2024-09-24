@@ -10,11 +10,12 @@ function Box (props) {
   return (
       
         <mesh
+        castShadow 
         {...props}
         ref={meshRef}
         onPointerOver={(e)=> setHovered(true)}
         onPointerOut={(e) => setHovered(false)}>
-          <boxGeometry args={[2, 2, 2]}/>
+          <boxGeometry/>
           <meshStandardMaterial color={ hovered ? "yellow" : "red"}/>
         </mesh>
       
